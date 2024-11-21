@@ -1,17 +1,17 @@
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function NavBar() {
     return (
         <nav>
             <ul>
-            <Link to="/">Home</Link>
-            <Link to="/workout">Workout</Link>
-            <Link to="/dietandnutrition"> Diet & Nutrition</Link>
-            <Link to="/progress">Progress Tracking & Motivation</Link>
-            <Link to="/mentaltraining">Mental Training</Link>
-            <Link to="/events">Events</Link>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/workout">Workouts</Link></li>
+            <li><Link to="/dietandnutrition"> Diet & Nutrition</Link></li>
+            <li><Link to="/progress">Progress</Link></li>
+            <li><Link to="/mentaltraining">Mental Training</Link></li>
+            <li><Link to="/events">Events</Link></li>
 
             </ul>
         </nav>
-    )
+    );
 }
