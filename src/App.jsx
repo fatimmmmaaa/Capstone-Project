@@ -1,12 +1,12 @@
-import {Routes, Route} from 'react-router-dom'
-import HomePage from './pages/HomePage'
-import NotFound from './pages/NotFound'
-import NavBar from './components/NavBar'
-import Progress from './pages/Progress'
-import MentalTraining from './pages/MentalTraining'
-import Events from './pages/Events'
-import Workout from './pages/workout'
-import DietAndNutrition from './pages/DietAndNutrition'
+import { Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import NotFound from './pages/NotFound';
+import NavBar from './components/NavBar';
+import Progress from './pages/Progress';
+import MentalTraining from './pages/MentalTraining';
+import Events from './pages/Events';
+import Workout from './pages/workout';
+import DietAndNutrition from './pages/DietAndNutrition';
 
 
 
@@ -27,5 +27,5 @@ export default function App() {
         <Route path="/*" element={<NotFound />} />
       </Routes>
     </main>
-  )
+  );
 }
