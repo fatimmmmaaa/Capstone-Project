@@ -6,11 +6,14 @@ export default function Home() {
     const [workouts, setWorkouts] = useState(null);
     const [selectedCharacter, setSelectedCharacter] = useState("Goku");
     const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
     const navigate = useNavigate();
 
     // Fetch workouts based on selected character
     useEffect(() => {
         setLoading(true);
+        setError(null); // resets error before new request
+
         axios
             .get(`http://localhost:4000/api/workouts/${selectedCharacter}`)
             .then((response) => {
@@ -21,10 +24,22 @@ export default function Home() {
                 setLoading(false);
             })
             .catch((error) => {
+                // handle error
                 console.error("Error fetching workouts:", error);
+                if (error.response) {
+                    // Server returned a response error status
+                    setError(error.response.data.message || "An error occurred while fetching workouts.");
+                } else if (error.request) {
+                    // No response received from server
+                    setError("No response from server, check your network.");
+                } else {
+                    // Something went wrong setting up the request
+                    setError("An error occurred while setting up the request.");
+                }
                 setLoading(false);
             });
     }, [selectedCharacter]);
+
 
     const handleCharacterSelect = (character) => {
         setSelectedCharacter(character);
