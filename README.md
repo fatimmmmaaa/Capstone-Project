@@ -30,4 +30,5 @@ installations:
 Node.js and npm installed
 MongoDB 
 
-http://localhost:4000 
+http://localhost:4000
+http://localhost:5173/
