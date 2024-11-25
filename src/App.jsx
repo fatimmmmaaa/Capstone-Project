@@ -18,7 +18,7 @@ export default function App() {
 
       <Routes>
         <Route path ="/" element={<HomePage />}/>
-        <Route path="/workout" element={<Workout />} />
+        <Route path="/workout/:id" element={<Workout />} />
         <Route path="/dietandnutrition" element={<DietAndNutrition />} />
         <Route path="/progress" element={<Progress />} />
         <Route path="/mentaltraining" element={<MentalTraining />} />
