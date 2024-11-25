@@ -66,7 +66,13 @@ export default function Home() {
                     <h3>Charging up your power level...</h3>
                     <p>Get ready for your training!</p>
                 </div>
+            ) : error ? (
+                <div className="error-message">
+                    <h3>Oops, something went wrong:</h3>
+                    <p>{error}</p>
+                </div>
             ) : (
+                
                 <div>
                     <h3>Select a workout:</h3>
                     {workouts && workouts.length > 0 ? (
