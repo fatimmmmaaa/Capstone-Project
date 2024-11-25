@@ -5,7 +5,7 @@ import NavBar from './components/NavBar';
 import Progress from './pages/Progress';
 import MentalTraining from './pages/MentalTraining';
 import Events from './pages/Events';
-import Workout from './pages/workout';
+import Workout from './pages/Workout';
 import DietAndNutrition from './pages/DietAndNutrition';
 
 
